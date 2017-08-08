@@ -1,0 +1,27 @@
+﻿Testes com Postman Rest Client for googleChrome.
+
+Testes de Post
+
+http://localhost:59870/api/minificador
+
+{"Origem": "origem"}
+
+Configurações:
+Post
+Content-Type
+application/json
+
+
+Testes Get:
+
+http://localhost:59870/api/minificador
+http://localhost:59870/api/minificador/1
+
+Resultado:
+[
+    "origem.html",
+    "destino.html"
+]
+
+
+

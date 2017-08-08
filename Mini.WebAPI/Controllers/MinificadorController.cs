@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Mini.WebAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Windows.Forms;
 
 namespace Mini.WebAPI.Controllers
 {
@@ -33,8 +35,24 @@ namespace Mini.WebAPI.Controllers
 
 
         // POST api/values
-        public void Post([FromBody]string value)
-        {
+        //public void Post([FromBody]string value)
+        //{
+        //}
+
+        [HttpPost]
+        public HttpResponseMessage Executar([FromBody] ArquivoModel arquivo) {
+
+            if (arquivo.Origem == "origem")
+            {
+                Console.WriteLine("É igual");
+                MessageBox.Show("É igual");
+            }
+            else {
+                //Console.WriteLine();
+                MessageBox.Show("É Diferente");
+            }
+
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         
